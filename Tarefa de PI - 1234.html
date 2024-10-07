@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI - Tarefa</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="display: flex;">
+    Meus gráficos da Tarefa de PI - ChartJS para casa:
+    <div>
+        <canvas id="myChart" style="position: relative; height: 291px; width: 614px; display: block; box-sizing: border-box;" width="767" height="363"></canvas>
+    </div> 
+    <div>
+        <canvas id="myChart2" style="position: relative; height: 291px; width: 614px; display: block; box-sizing: border-box;" width="767" height="363"></canvas>
+    </div>
+<script>
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+        datasets: [{
+          label: '# Umidade',
+          data: [80, 82, 80, 85, 82, 83],
+          borderWidth: 1
+        },
+        {
+          label: '# Temperatura',
+          data: [30, 29, 28, 25, 22, 23],
+          borderWidth: 1
+        }
+    ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    const ctx2 = document.getElementById('myChart2');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+        datasets: [{
+          label: '# Umidade',
+          data: [80, 82, 80, 85, 82, 83],
+          borderWidth: 1
+        },
+        {
+          label: '# Temperatura',
+          data: [30, 29, 28, 25, 22, 23],
+          borderWidth: 1
+        }
+    ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+  <br><br><br>Muito obrigada pela atenção! <br><br><br><br><br><br> 1CCOB - Julia Visconti - 04242033
+  </body>
+</html>
